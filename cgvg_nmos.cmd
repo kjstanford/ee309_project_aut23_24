@@ -1,12 +1,12 @@
-# CFET-BEOL SRAM at 2nm --> Si PMOS sdevice simulations of Cg
+# CFET-BEOL SRAM at 2nm --> Si NMOS sdevice simulations of Cg
 
 Device NSFET {
 	File {*input files
-		Grid = "nanosheet_ns2_2D_PMOS_msh.tdr"
-		Doping = "nanosheet_ns2_2D_PMOS_msh.tdr"
+		Grid = "nanosheet_ns2_2D_NMOS_msh.tdr"
+		Doping = "nanosheet_ns2_2D_NMOS_msh.tdr"
       	      *output files
-		Plot = "nanosheet_ns2_2D_PMOS_cgvg_post.tdr"
-		Current = "nanosheet_ns2_2D_PMOS_cgvg.plt"
+		Plot = "nanosheet_ns2_2D_NMOS_cgvg_post.tdr"
+		Current = "nanosheet_ns2_2D_NMOS_cgvg.plt"
 		Parameter = "models.par"
 	     }
    	      
@@ -43,7 +43,7 @@ Device NSFET {
 
 File {
 	Output = "nanosheet_cv.log"
-	ACExtract = "ac_nanosheet_ns2_2D_PMOS"
+	ACExtract = "ac_nanosheet_ns2_2D_NMOS"
      }
      
 System { 
@@ -63,13 +63,13 @@ Save(FilePrefix="v0")
 
 Quasistationary
 ( InitialStep=0.1 MaxStep=0.5 MinStep=0.001
-Goal {Parameter=vd.dc value=0.7})
+Goal {Parameter=vd.dc value=0.0})
 { Coupled {Poisson Electron Hole}}
 Save(FilePrefix="v1")
 
 Quasistationary
 ( InitialStep=0.1 MaxStep=0.5 MinStep=0.001
-Goal {Parameter=vs.dc value=0.7})
+Goal {Parameter=vs.dc value=0.0})
 { Coupled {Poisson Electron Hole}}
 Save(FilePrefix="v2")
 
