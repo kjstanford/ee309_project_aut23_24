@@ -11,20 +11,20 @@ Device NSFET {
 	     }
    	      
 	Electrode{
-        {Name="Gate" Voltage=0.0 Workfunction=4.71} 
+        {Name="Gate" Voltage=0.0 Workfunction=4.55} 
         {Name="Drain" Voltage = 0.0}
         {Name="Source" Voltage = 0.0}
         }
 
 
 	Physics (Material="Silicon"){
-		Fermi
+		# Fermi
 		EffectiveIntrinsicDensity( OldSlotboom )
         Mobility( DopingDep )
         Recombination( SRH( DopingDep ))
 		}
 	Physics (Material="Metal"){
-	    MetalWorkfunction ( Workfunction=4.71 )
+	    MetalWorkfunction ( Workfunction=4.55 )
 	}
 
 	Plot {
@@ -63,30 +63,36 @@ Save(FilePrefix="v0")
 
 Quasistationary
 ( InitialStep=0.1 MaxStep=0.5 MinStep=0.001
-Goal {Parameter=vds.dc value=0.01})
+Goal {Parameter=vgs.dc value=-0.5})
 { Coupled {Poisson Electron Hole}}
 Save(FilePrefix="v1")
 
 Quasistationary
 ( InitialStep=0.1 MaxStep=0.5 MinStep=0.001
-Goal {Parameter=vds.dc value=0.7})
+Goal {Parameter=vds.dc value=0.01})
 { Coupled {Poisson Electron Hole}}
 Save(FilePrefix="v2")
 
-Load(FilePrefix="v1")
-NewCurrentFile="main_m0p01_"
 Quasistationary
-( InitialStep=0.025 MaxStep=0.025 MinStep=0.001
-Goal {Parameter=vgs.dc value=0.7})
+( InitialStep=0.1 MaxStep=0.5 MinStep=0.001
+Goal {Parameter=vds.dc value=0.7})
 { Coupled {Poisson Electron Hole}}
 Save(FilePrefix="v3")
 
 Load(FilePrefix="v2")
+NewCurrentFile="main_m0p01_"
+Quasistationary
+( InitialStep=0.025 MaxStep=0.025 MinStep=0.001
+Goal {Parameter=vgs.dc value=1.5})
+{ Coupled {Poisson Electron Hole}}
+Save(FilePrefix="v4")
+
+Load(FilePrefix="v3")
 NewCurrentFile="main_m0p7_"
 Quasistationary
 ( InitialStep=0.025 MaxStep=0.025 MinStep=0.001
-Goal {Parameter=vgs.dc value=0.7})
+Goal {Parameter=vgs.dc value=1.5})
 { Coupled {Poisson Electron Hole}}
-Save(FilePrefix="v4")
+Save(FilePrefix="v5")
 
 }
