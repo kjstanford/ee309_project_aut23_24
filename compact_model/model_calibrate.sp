@@ -2,11 +2,11 @@
 .INCLUDE "tcad_calibrated_model.pm"
 .PARAM vgmin=-0.5 vgmax=1.5 vdpar0=0.01 vdpar1=0.7 vgate=0
 
-.PROBE TRAN
+.PROBE DC
 + I(vd0)
 + I(vd1)
 
-.PRINT TRAN
+.PRINT DC
 + I(vd0)
 + I(vd1)
 
