@@ -9,6 +9,9 @@ vgate = lis_M[:,0]
 id0p01 = lis_M[:,1]
 id0p7 = lis_M[:,2]
 
+cad_M0p01 = pd.read_csv('../csv_tcad_model/main_m0p01_fet_dut_nanosheet_ns2_2D_NMOS_idvg.csv')
+cad_M0p7 = pd.read_csv('../csv_tcad_model/main_m0p7_fet_dut_nanosheet_ns2_2D_NMOS_idvg.csv')
+
 legend = [None]
 # print(mvg)
 
