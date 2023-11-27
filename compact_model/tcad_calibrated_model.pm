@@ -3,26 +3,26 @@
 ************************************************************
 *                         general                          *
 ************************************************************
-+version = 107             bulkmod = 1               igcmod  = 0               igbmod  = 0             
-+gidlmod = 1               iimod   = 0               geomod  = 1               rdsmod  = 0             
++version = 107             bulkmod = 0               igcmod  = 0               igbmod  = 0             
++gidlmod = 0               iimod   = 0               geomod  = 0               rdsmod  = 0             
 +rgatemod= 0               rgeomod = 0               shmod   = 0               nqsmod  = 0             
-+coremod = 0               cgeomod = 0               capmod  = 0               tnom    = 25            
-+eot     = 1e-009          eotbox  = 1.4e-007        eotacc  = 1e-010          tfin    = 6.5e-009      
-+toxp    = 2.1e-009        nbody   = 1e+022          phig    = 4.45               epsrox  = 3.9           
-+epsrsub = 11.9            easub   = 4.05            ni0sub  = 1.1e+016        bg0sub  = 1.17          
-+nc0sub  = 2.86e+025       nsd     = 2e+026          ngate   = 0               nseg    = 5             
-+l       = 2.1e-008        xl      = 1e-009          lint    = -3e-009         dlc     = 0             
-+dlbin   = 0               hfin    = 3.2e-008        deltaw  = 0               deltawcv= 0             
++coremod = 0               cgeomod = 0               capmod  = 0               tnom    = 27            
++eot     = 0.90833e-009    eotbox  = 1.4e-007        eotacc  = 1e-010          tfin    = 7e-009      
++toxp    = 1.3e-009        nbody   = 1e+022          phig    = 4.55            epsrox  = 3.9           
++epsrsub = 11.9            easub   = 4.05            ni0sub  = 1.1e+016        bg0sub  = 1.12416          
++nc0sub  = 2.86e+025       nsd     = 1e+027          ngate   = 0               nseg    = 5             
++l       = 1.4e-008        xl      = 0e-009          lint    = 0e-009          dlc     = 0             
++dlbin   = 0               hfin    = 5.0e-008        deltaw  = 0               deltawcv= 0             
 +sdterm  = 0               epsrsp  = 3.9           
-+toxg    = 1.80e-009
++toxg    = 1.30e-009
 ************************************************************
 *                            dc                            *
 ************************************************************
 +cit     = 0               cdsc    = 0.01            cdscd   = 0.01            dvt0    = 0.05          
 +dvt1    = 0.48            phin    = 0.05            eta0    = 0.062           dsub    = 0.35          
-+k1rsce  = 0               lpe0    = 0               dvtshift= 0               qmfactor= 2.5           
++k1rsce  = 0               lpe0    = 0               dvtshift = 0              qmfactor= 0.0           
 +etaqm   = 0.54            qm0     = 0.001           pqm     = 0.66            u0      = 0.025         
-+etamob  = 2               up      = 0               ua      = 0.55            eu      = 1.2           
++etamob  = 2               up      = 0               ua      = 0.0             eu      = 1.2           
 +ud      = 0               ucs     = 1               rdswmin = 0               rdsw    = 200           
 +wr      = 1               rswmin  = 0               rdwmin  = 0               rshs    = 0             
 +rshd    = 0               vsat    = 70000           deltavsat= 0.28            ksativ  = 2             
