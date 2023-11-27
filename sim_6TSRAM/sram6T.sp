@@ -17,12 +17,12 @@
 +    PARHIER=LOCAL
 +    PSF=2
 
-mpg1 bl wl n1 vss nmos_sram w=27e-9 l=20e-9 nfin=1
-mpu1 n1 n2 vdd vdd pmos_sram w=27e-9 l=20e-9 nfin=1
-mpd1 n1 n2 vss vss nmos_sram w=27e-9 l=20e-9 nfin=1
-mpg2 blb wl n2 vss nmos_sram w=27e-9 l=20e-9 nfin=1
-mpu2 n2 n1 vdd vdd pmos_sram w=27e-9 l=20e-9 nfin=1
-mpd2 n2 n1 vss vss nmos_sram w=27e-9 l=20e-9 nfin=1
+mpg1 bl wl n1 vss nmos_sram l=20e-9 nfin=1
+mpu1 n1 n2 vdd vdd pmos_sram l=20e-9 nfin=1
+mpd1 n1 n2 vss vss nmos_sram l=20e-9 nfin=1
+mpg2 blb wl n2 vss nmos_sram l=20e-9 nfin=1
+mpu2 n2 n1 vdd vdd pmos_sram l=20e-9 nfin=1
+mpd2 n2 n1 vss vss nmos_sram l=20e-9 nfin=1
 vsuph vdd 0 DC=vmax
 vsupl vss 0 DC=vmin
 vwl wl 0 DC=vmax

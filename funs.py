@@ -450,3 +450,29 @@ def generate_spice_netlist(fname, params):
     with open(fname+'.sp', 'w') as fp:
         fp.write('\n'.join(o_lines))
     fp.close()
+
+def read_lis_general(fname):
+    lines = list(fi.input(files = fname))
+
+    line_num = 0
+    first_word = lines[line_num].split()
+    first_word = None if len(first_word) == 0 else first_word[0]
+    acq_start = 0
+    acq_list = []
+    while first_word != 'y':
+        if acq_start == 1:
+            acq_list.append(lines[line_num].split())
+        if first_word == 'x':
+            line_num += 4
+            acq_start = 1
+        else:
+            line_num += 1
+        first_word = lines[line_num].split()
+        first_word = None if len(first_word) == 0 else first_word[0]
+
+    N1 = len(acq_list)
+    N2 = len(acq_list[0])
+    lis_M = np.zeros((N1,N2))
+    for ii in range(N2):
+        lis_M[:,ii] = np.array([ float(x[ii]) for x in acq_list ])
+    return lis_M
