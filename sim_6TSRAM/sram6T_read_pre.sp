@@ -1,26 +1,30 @@
 ** header **
 .INCLUDE "../compact_model/7nm_TT_160803.pm"
-.PARAM vmax=0.7 vmin=0 vin=0
-.PARAM step=1e-12
-.PARAM sim_time=5e-9
-.PARAM wl_pw=1e-09
-.PARAM wl_del=1e-09
-.PARAM rise=0.3e-9
-.PARAM fall=0.3e-9
-.PARAM tp=5e-9
-.PARAM bl_cap=1e-12 
+.PARAM vmax = @vmax@ 
+.PARAM vmin = @vmin@ 
+.PARAM vin = @vin@
+.PARAM step = @step@
+.PARAM sim_time = @sim_time@
+.PARAM wl_pw = @wl_pw@
+.PARAM wl_del = @wl_del@
+.PARAM rise = @rise@
+.PARAM fall = @fall@
+.PARAM tp = @tp@
+.PARAM bl_cap = @bl_cap@ 
 
 .PROBE TRAN
 + V(wl)
 + V(bl)
 + V(blb)
-+ I(vsuph)
++ V(n1)
++ V(n2)
 
 .PRINT TRAN
 + V(wl)
 + V(bl)
 + V(blb)
-+ I(vsuph)
++ V(n1)
++ V(n2)
 
 .DCVOLT n1 'vmin'
 .DCVOLT n2 'vmax'
