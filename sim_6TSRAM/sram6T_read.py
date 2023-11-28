@@ -23,7 +23,7 @@ params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=3e-9, wl_pw=0.5e-9, 
                rise=0.3e-9, fall=0.3e-9, tp=3e-9, bl_cap=1e-13)
 read_spice_netlist(fname='sram6T_read', params=params)
 
-# sys('hspice sram6T_read_post.sp -o s1')
+sys('hspice sram6T_read_post.sp -o s1')
 lis_M = read_lis_general('s1.lis')
 
 lis_t = lis_M[:,0]
