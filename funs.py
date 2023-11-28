@@ -459,13 +459,21 @@ def read_lis_general(fname):
     first_word = None if len(first_word) == 0 else first_word[0]
     acq_start = 0
     acq_list = []
+    occ = 0
     while True:
         if first_word == 'y':
             next_word = lines[line_num+1].split()
             next_word = None if len(next_word) == 0 else next_word[0]
-
+            if next_word == 'x':
+                line_num += 5
+                occ = line_num
+            else:
+                break
         if acq_start == 1:
-            acq_list.append(lines[line_num].split())
+            if occ == 0:
+                acq_list.append(lines[line_num].split())
+            else:
+                acq_list[line_num-occ] += lines[line_num].split()
         if first_word == 'x':
             line_num += 4
             acq_start = 1
