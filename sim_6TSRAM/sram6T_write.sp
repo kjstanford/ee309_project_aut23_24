@@ -29,6 +29,7 @@
 .DCVOLT n2 'vmax'
 .DCVOLT bl 'vmax'
 .DCVOLT blb 'vmax'
+
 .TRAN 'step' 'sim_time'
 
 .TEMP 25.0
