@@ -7,8 +7,8 @@
 .PARAM sim_time = 3e-09
 .PARAM wl_pw = 5e-10
 .PARAM wl_del = 5e-10
-.PARAM rise = 3e-10
-.PARAM fall = 3e-10
+.PARAM rise = 1e-10
+.PARAM fall = 1e-10
 .PARAM tp = 3e-09
 .PARAM bl_cap = 1e-13
 
