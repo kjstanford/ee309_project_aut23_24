@@ -18,7 +18,7 @@ lis_M = read_lis_general('s0.lis')
 lis_Vin = lis_M[:,0]
 lis_Iin = -lis_M[:,1]
 
-lin_plot(x=[lis_Vin], y=[lis_Iin*1e6], c=['r'], s=['solid'], xlabel="$V_{in} (V)$", ylabel="$I_{in}$ (${\mu}A$)", figname='temp.png')
+lin_plot(x=[lis_Vin], y=[lis_Iin*1e6], c=['r'], s=['solid'], xlabel="$V_{in} (V)$", ylabel="$I_{in}$ (${\mu}A$)", figname='temp.png', lw=4.5)
 
 SINM = max(lis_Iin)
 SVNM = evaluateSVNM(lis_Vin, lis_Iin)

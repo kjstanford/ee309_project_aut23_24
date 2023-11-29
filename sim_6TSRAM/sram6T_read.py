@@ -19,8 +19,8 @@ def spice_netlist(fname, params):
     fp.close()
 
 
-params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=3e-9, wl_pw=0.5e-9, wl_del=0.5e-9,\
-               rise=0.1e-9, fall=0.1e-9, tp=3e-9, bl_cap=1e-13)
+params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=5e-9, wl_pw=3e-9, wl_del=0.5e-9,\
+               rise=0.1e-9, fall=0.1e-9, tp=5e-9, bl_cap=2.5e-13)
 spice_netlist(fname='sram6T_read', params=params)
 
 sys('hspice sram6T_read_post.sp -o s1')
@@ -32,6 +32,7 @@ lis_vbl = lis_M[:,2]
 lis_vblb = lis_M[:,3]
 lis_vn1 = lis_M[:,4]
 lis_vn2 = lis_M[:,6]
+print(f"PW: {params['wl_pw']}, DVBL: {lis_vbl[0]-lis_vbl[-1]}V")
 
 # lin_plot(x=[lis_t]*5, y=[lis_vwl, lis_vbl, lis_vblb, lis_vn1, lis_vn2], c=['r', 'g', 'b', 'k', 'm'], s=['solid'], xlabel="$time (s)$", ylabel="$voltage (V)$", figname='temp.png')
 

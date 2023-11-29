@@ -4,13 +4,13 @@
 .PARAM vmin = 0
 .PARAM vin = 0
 .PARAM step = 1e-12
-.PARAM sim_time = 3e-09
-.PARAM wl_pw = 5e-10
+.PARAM sim_time = 5e-09
+.PARAM wl_pw = 2e-09
 .PARAM wl_del = 5e-10
 .PARAM rise = 1e-10
 .PARAM fall = 1e-10
-.PARAM tp = 3e-09
-.PARAM bl_cap = 1e-13
+.PARAM tp = 5e-09
+.PARAM bl_cap = 2.5e-13
 
 .PROBE TRAN
 + V(rwl)
