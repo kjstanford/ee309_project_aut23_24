@@ -15,12 +15,14 @@
 
 .PROBE TRAN
 + V(wl)
++ V(bl)
 + V(blb)
 + V(n1)
 + V(n2)
 
 .PRINT TRAN
 + V(wl)
++ V(bl)
 + V(blb)
 + V(n1)
 + V(n2)
