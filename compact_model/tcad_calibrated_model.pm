@@ -12,20 +12,20 @@
 +epsrsub = 11.9            easub   = 4.05            ni0sub  = 1.1e+016        bg0sub  = 1.12416          
 +nc0sub  = 2.86e+025       nsd     = 1e+027          ngate   = 0               nseg    = 5             
 +l       = 1.4e-008        xl      = 0e-009          lint    = 0e-009          dlc     = 0             
-+dlbin   = 0               hfin    = 5.0e-008        deltaw  = 0               deltawcv= 0             
++dlbin   = 0               hfin    = 1.0e-006        deltaw  = 0               deltawcv= 0             
 +sdterm  = 0               epsrsp  = 3.9           
 +toxg    = 1.30e-009
 ************************************************************
 *                            dc                            *
 ************************************************************
-+cit     = 0               cdsc    = 0.01            cdscd   = 0.01            dvt0    = 0.05          
++cit     = 0               cdsc    = 0.01            cdscd   = 0.0             dvt0    = 0.05          
 +dvt1    = 0.48            phin    = 0.05            eta0    = 0.062           dsub    = 0.35          
 +k1rsce  = 0               lpe0    = 0               dvtshift = 0              qmfactor= 0.0           
 +etaqm   = 0.54            qm0     = 0.001           pqm     = 0.66            u0      = 0.025         
 +etamob  = 2               up      = 0               ua      = 0.0             eu      = 1.2           
-+ud      = 0               ucs     = 1               rdswmin = 0               rdsw    = 200           
++ud      = 0               ucs     = 1               rdswmin = 0               rdsw    = 00           
 +wr      = 1               rswmin  = 0               rdwmin  = 0               rshs    = 0             
-+rshd    = 0               vsat    = 70000           deltavsat= 0.28            ksativ  = 2             
++rshd    = 0               vsat    = 70000           deltavsat= 0.28           ksativ  = 2             
 +mexp    = 4               ptwg    = 30              pclm    = 0.05            pclmg   = 0             
 +pdibl1  = 0               pdibl2  = 0.002           drout   = 1               pvag    = 0             
 +fpitch  = 2.7e-008        rth0    = 0.225           cth0    = 1.243e-006      wth0    = 2.6e-007      

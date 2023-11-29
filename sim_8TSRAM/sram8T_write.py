@@ -19,8 +19,8 @@ def spice_netlist(fname, params):
     fp.close()
 
 
-params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=3e-9, wl_pw=0.5e-9, wl_del=0.5e-9,\
-               bl_pw=0.5e-9, bl_del=0.5e-9, wrise=0.1e-9, wfall=0.1e-9, brise=0.1e-9, bfall=0.1e-9, tp=3e-9)
+params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=1e-9, wl_pw=0.2e-9, wl_del=0.1e-9,\
+               bl_pw=0.2e-9, bl_del=0.1e-9, wrise=0.1e-9, wfall=0.1e-9, brise=0.1e-9, bfall=0.1e-9, tp=1e-9)
 spice_netlist(fname='sram8T_write', params=params)
 
 sys('hspice sram8T_write_post.sp -o s2')
