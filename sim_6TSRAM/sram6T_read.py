@@ -19,7 +19,7 @@ def spice_netlist(fname, params):
     fp.close()
 
 
-params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=5e-9, wl_pw=1e-9, wl_del=0.5e-9,\
+params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=5e-9, wl_pw=3e-9, wl_del=0.5e-9,\
                rise=0.1e-9, fall=0.1e-9, tp=5e-9, bl_cap=2.5e-13)
 spice_netlist(fname='sram6T_read', params=params)
 
