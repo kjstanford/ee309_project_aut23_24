@@ -19,7 +19,7 @@ def spice_netlist(fname, params):
     fp.close()
 
 
-params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=5e-9, wl_pw=3e-9, wl_del=0.5e-9,\
+params = dict(vmax=0.7, vmin=0, vin=0, step=1e-12, sim_time=5e-9, wl_pw=1e-9, wl_del=0.5e-9,\
                rise=0.1e-9, fall=0.1e-9, tp=5e-9, bl_cap=2.5e-13)
 spice_netlist(fname='sram6T_read', params=params)
 
@@ -56,6 +56,7 @@ ax2.set(yticks=[0, 0.7])
 ax3.set(ylabel='$N1,N2(V)$')
 ax3.set(ylim=[-0.1, 0.8])
 ax3.set(yticks=[0, 0.7])
+ax3.set(xlim=[0, 3])
 ax1.minorticks_on()
 ax1.tick_params(direction='in', length=6, width=2, colors='k',
             grid_color='k', grid_alpha=0.5, which='major')
@@ -73,3 +74,5 @@ ax3.tick_params(direction='in', length=3, width=2, colors='k',
             grid_color='k', grid_alpha=0.5, which='minor')
 plt.xlabel(xlabel='time (ns)', fontweight='bold')
 plt.savefig(fname='temp.png')
+
+# np.savetxt('read_feol_pg.csv', np.transpose(np.array([lis_t, lis_vwl, lis_vbl, lis_vblb, lis_vn1, lis_vn2])))
