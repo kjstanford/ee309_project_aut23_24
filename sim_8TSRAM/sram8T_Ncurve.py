@@ -24,3 +24,5 @@ SINM = max(lis_Iin)
 SVNM = evaluateSVNM(lis_Vin, lis_Iin)
 
 print(f'SVNM: {SVNM}V and SINM: {SINM*1e6}uA')
+
+np.savetxt('Ncurve_beol_rwpg.csv', np.transpose(np.array([lis_Vin, lis_Iin])))

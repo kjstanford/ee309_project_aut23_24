@@ -147,7 +147,7 @@
 ************************************************************
 +cit     = 0               cdsc    = 0.01            cdscd   = 0.01            dvt0    = 0.05          
 +dvt1    = 0.48            phin    = 0.05            eta0    = 0.062           dsub    = 0.35          
-+k1rsce  = 0               lpe0    = 0               dvtshift= 0               qmfactor= 2.5           
++k1rsce  = 0               lpe0    = 0               dvtshift= -0.06               qmfactor= 2.5           
 +etaqm   = 0.54            qm0     = 0.001           pqm     = 0.66            u0      = 0.002         
 +etamob  = 2               up      = 0               ua      = 0.55            eu      = 1.2           
 +ud      = 0               ucs     = 1               rdswmin = 0               rdsw    = 200           
